@@ -1,0 +1,13 @@
+body {
+    background-color: lightblue;
+}
+
+.keys{
+    display: flex;
+}
+
+[data-key]{
+    color: red;
+    
+}
+
