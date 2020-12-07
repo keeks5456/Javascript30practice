@@ -1,22 +1,22 @@
-function playSound(event) {
-	const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`); //add an event to the audio to play it
-	const key = document.querySelector(`.key[data-key="${event.keyCode}"]`); //add an event to the audio to have the corresponding key played
-
-	if (!audio) return; //stop the function from running all together
-	audio.currentTime = 0; //rewind to start
-	audio.play();
-	key.classList.add('playing');
-}
 
 function removeTransition(e) {
 	if (e.propertyName !== 'transform') return; //skip if its not a transform
-	this.classList.remove;
-	console.log(e.propertyName);
+	e.target.classList.remove('playing')
 }
 
-const keys = document.querySelectorAll('.keys');
-keys.forEach((key) => {
-	key.addEventListener('transitionend', removeTransition);
-});
+function playSound(e) {
+	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //add an event to the audio to play it
+	const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //add an event to the audio to have the corresponding key played
+	if (!audio) return; //stop the function from running all together
 
-window.addEventListener('keydown', playSound);
+	key.classList.add('playing');
+	audio.currentTime = 0; //rewind to start
+	audio.play();
+}
+
+const keys = Array.from(document.querySelectorAll('.key'))
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+window.addEventListener('keydown', playSound)
+
+
+//come back to later
