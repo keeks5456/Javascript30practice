@@ -1,0 +1,28 @@
+
+/* The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher. */
+
+/* While the :root selector and html selector both target the same HTML elements, it may be useful to know that :root actually has a higher specificity. Pseudo-class selectors (but not pseudo-elements) have a specificity equal to that of a class, which is higher than a basic element selector. */
+
+:root{
+    --spacing: 10px;
+    --blur: 40px;
+    --color: #ffc600;
+}
+
+body {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img{
+    filter: blur(var(--blur));
+    padding: var(--spacing);
+    background-color: var(--color);
+}
+
+.h1{
+    color: var(--color);
+}
