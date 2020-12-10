@@ -43,11 +43,11 @@ html {
     background: black;
     position: absolute;
     top: 50%;
-    transform-origin: 100%;
+    transform-origin: 100%; 
+    /* ^^^ where it does the rotation along the x-axis */
     transform: rotate(90deg);
     transition: all 0.05s;
-    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68)
     transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
 }
 
-  }
+  
