@@ -3,6 +3,8 @@
 
 /* While the :root selector and html selector both target the same HTML elements, it may be useful to know that :root actually has a higher specificity. Pseudo-class selectors (but not pseudo-elements) have a specificity equal to that of a class, which is higher than a basic element selector. */
 
+/* For any non-empty HTML document, documentElement will always be an <html> element. For any non-empty XML document, documentElement will always be whatever element is the root element of the document. */
+
 :root{
     --spacing: 10px;
     --blur: 40px;
