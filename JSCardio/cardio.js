@@ -67,18 +67,31 @@
           const lastGuy = a.passed - a.year
           const nextGuy = b.passed - a.year 
 
-          lastGuy > nextGuy ? 1 : -1
+          lastGuy > nextGuy ? -1 : 1
       })
       console.log(lived, 'lived')
 
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-  
-  
+
+    //   const category = document.querySelector('.mw-category')
+    //   //this originally is a NodeList, so we cannot us map() to iterate over it. But we can do 1 of 2 things:
+    //   const link = Array.from(category.querySelectorAll('a'))
+    // // OR use the spread operator spread all the item into an array
+    // //   const link = [...category.querySelectorAll('a') ]
+
+    //   const de = links.map(link => link.textContent).filter(streetName => streetName.includes('de'))
+
       // 7. sort Exercise
       // Sort the people alphabetically by last name
-  
+      const alphabetical = people.sort((a,b) => {
+          const [aLast, aFirst] = a.split(', ')
+          const [bLast, bFirst] = b.split(', ')
+          return aLast > bLast ? 1 : -1
+      })
+      console.log(alphabetical)
+
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
