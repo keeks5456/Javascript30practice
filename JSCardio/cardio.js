@@ -94,5 +94,16 @@
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
+    //    reduce is a flexible way of doing this
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-  
+      const transport = data.reduce((object, item) => {
+          if(!object[item]){
+              object[item] = 0 //if the obj[item] does not exist assign it to 0
+          }
+          object[item] ++
+          return object
+      },{})
+
+      console.log(transport)
+
+    //   done :)
