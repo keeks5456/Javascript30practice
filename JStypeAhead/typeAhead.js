@@ -5,14 +5,13 @@ const cities = []
 fetch(endpoint)
 .then(res => res.json())
 .then(data => {
-    console.log(data)
    cities.push(...data)
 })
 
 findMatches = (wordsMatch, cities) => {
+    console.log(wordsMatch)
     return cities.filter(place => {
          // need to figure out if city or state was searched matches
-
         const regex = new RegExp(wordsMatch, 'gi') // g = global, i = case insensitive
         return place.city.match(regex) || place.state.match(regex)
     })
