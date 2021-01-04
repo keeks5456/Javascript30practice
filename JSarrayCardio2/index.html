@@ -16,8 +16,44 @@
             <p>The index of the current element being processed in the array.</p>
             <li><b>the array(optional)</b></li>
             <p>The array some() was called upon.</p>
-            <li><b>this keyword(optional)</b></li>
+            <li><b>thisArgs(optional)</b></li>
             <p>A value to use as this when executing callback.</p>
         </ul>
+        <p><b>The Return Value:</b>true if the callback function returns a truthy value for at least one element in the array. Otherwise, false.</p>
+        <h3>.every()</h3>
+        <p>The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value. This method takes in a callback function that takes three arguments:</p>
+        <ul>
+            <li><b>the index(optional)</b></li>
+            <p>The index of the current element being processed in the array.</p>
+            <li><b>the array(optional)</b></li>
+            <p>The array every() was called upon.</p>
+            <li><b>thisArgs(optional)</b></li>
+            <p>A value to use as this when executing callback.</p>
+        </ul>
+        <p><b>The Return Value:</b>true if the callback function returns a truthy value for every array element. Otherwise, false.</p>
+        <h3>.find()</h3>
+        <p>The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfies the testing function, undefined is returned.This method takes a callback function that takes three arguments:</p>
+        <ul>
+            <li><b>the index(optional)</b></li>
+            <p>The index (position) of the current element in the array.</p>
+            <li><b>the array(optional)</b></li>
+            <p>The array find() was called upon.</p>
+            <li><b>thisArgs(optional)</b></li>
+            <p>A value to use as this when executing callback.</p>
+        </ul>
+        <p><b>The Return Value:</b>TThe value of the first element in the array that satisfies the provided testing function. Otherwise, undefined is returned.</p>
+        <h3>.findIndex()</h3>
+        <p>The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test. A function to execute on each value in the array until the function returns true, indicating that the satisfying element was found.This method takes a callback function that takes three arguments:</p>
+        <ul>
+            <li><b>the element</b></li>
+            <p>The current element being processed in the array.</p>
+            <li><b>the index(optional)</b></li>
+            <p>The index (position) of the current element in the array.</p>
+            <li><b>the array(optional)</b></li>
+            <p>The array find() was called upon.</p>
+            <li><b>thisArgs(optional)</b></li>
+            <p>A value to use as this when executing callback.</p>
+        </ul>
+        <p><b>The Return Value:</b>The index of the first element in the array that passes the test. Otherwise, -1.</p>
     </body>
 </html>
